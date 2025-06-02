@@ -5,7 +5,7 @@
 // @grant       none
 // @version     1.0
 // @author      2gn
-// @description declutter scombz to reduce distractions
+// @description declutter ScombZ to reduce distractions
 // ==/UserScript==
 
 const HOME_URL = "https://scombz.shibaura-it.ac.jp/portal/home"
@@ -34,7 +34,7 @@ if (window.location.href == HOME_URL) {
   window.location.href = TASKS_URL;
 }
 
-// add task the link to the course
+// add course link to tasks
 
 function taskLinkToCourseLink(task_url) {
   // /lms/course/report/submission?idnumber=202503SU0119801001&reportId=20053495
@@ -106,10 +106,10 @@ pageMain.style.background = "#ffffff"
 const header = document.getElementById("global-header")
 
 const links = [
-  { text: "メール", url: GMAIL_URL, new_tab: true },
   { text: "課題", url: TASKS_URL, new_tab: false },
   { text: "時間割", url: TIMETABLE_URL, new_tab: false },
   { text: "Teams", url: TEAMS_URL, new_tab: true},
+  { text: "メール", url: GMAIL_URL, new_tab: true },
 ];
 
 const ul = document.createElement("ul");
@@ -153,3 +153,5 @@ document.addEventListener('DOMContentLoaded', function () {
   container.style.fontSize = "20px";
   })
 });
+
+
